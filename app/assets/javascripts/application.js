@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
+// Daniel note: add next line to include bootstrap js(bootstrap/alert) into project 
+//= require bootstrap/alert 
 //= require_tree .
