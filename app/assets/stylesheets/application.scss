@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+/* Daniel note: add next 2 lines to install Bootstrap CSS into project */ 
+@import "bootstrap-sprockets";
+@import "bootstrap";              
