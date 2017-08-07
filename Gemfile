@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
@@ -35,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Daniel note: add next line to use 'Bootstrap'
 gem 'bootstrap-sass' 
+# Daniel note: add next line to use 'simple_form'  
+gem "simple_form" 
+# Daniel note: add next line to install "devise" system 
+gem "devise"     
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
