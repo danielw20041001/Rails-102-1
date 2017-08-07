@@ -38,6 +38,9 @@ gem 'bootstrap-sass'
 gem "simple_form" 
 # Daniel note: add next line to install "devise" system 
 gem "devise"     
+# Daniel note: add next linet to install will_paginate
+gem "will_paginate"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
