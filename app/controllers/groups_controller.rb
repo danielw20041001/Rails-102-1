@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController 
 # Daniel note: add next line to limit "new group" must login 
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]  
-# before_action :find_group_and_check_permission, only: [:edit, :update, :destroy]
+  before_action :find_group_and_check_permission, only: [:edit, :update, :destroy]
   def index 
   	 @groups = Group.all 
   end
@@ -41,7 +41,13 @@ class GroupsController < ApplicationController
      @group.destroy   
      redirect_to groups_path, alert: "Group deleted"   
   end                            
-  private                  
+  private     
+    def find_group_and_check_permission
+    @group = Group.find(params[:id])
+    if current_user != @group.user
+      redirect_to root_path, alert: "You have no permission."
+    end
+  end              
   def group_params  
      params.require(:group).permit(:title, :description) 
   end 
